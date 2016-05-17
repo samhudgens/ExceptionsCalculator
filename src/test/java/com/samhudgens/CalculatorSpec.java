@@ -52,5 +52,11 @@ public class CalculatorSpec {
         assertEquals("should throw error", true, actual);
     }
 
+    @Test(expected = ComplexNumberException.class)
+    public void ComplexNumberTest() {
+        double actual = calculator.squareRoot(-7);
+        assertEquals("should throw complex number error", true, actual);
+    }
+
 
 }

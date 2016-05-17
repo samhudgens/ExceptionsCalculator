@@ -5,24 +5,29 @@ package com.samhudgens;
  */
 public class Calculator {
 
-    public int add(int a, int b) {
+    public static int add(int a, int b) {
         return a + b;
     }
 
-    public int subtract(int a, int b) {
+    public static int subtract(int a, int b) {
         return a - b;
     }
 
-    public int multiply(int a, int b) {
+    public static int multiply(int a, int b) {
         return a*b;
     }
 
-    public double divide(int numerator, int denominator) throws DivideByZeroException{
+    public static double divide(int numerator, int denominator) throws DivideByZeroException{
         if(denominator==0) {
             throw new DivideByZeroException();
         }
         return numerator/denominator;
     }
 
-
+    public static double squareRoot(double a) {
+        if(a<0) {
+            throw new ComplexNumberException();
+        }
+        return Math.sqrt(a);
+    }
 }
