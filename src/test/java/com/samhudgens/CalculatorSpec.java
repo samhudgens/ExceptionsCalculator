@@ -46,7 +46,7 @@ public class CalculatorSpec {
         assertEquals("divide the first number by the second", expected, actual, 0.0000001);
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = DivideByZeroException.class)
     public void divideByZeroTest() {
         double actual = calculator.divide(2,0);
         assertEquals("should throw error", true, actual);

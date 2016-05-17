@@ -17,13 +17,12 @@ public class Calculator {
         return a*b;
     }
 
-    public double divide(int numerator, int denominator) throws ArithmeticException{
+    public double divide(int numerator, int denominator) throws DivideByZeroException{
         if(denominator==0) {
-            throw new ArithmeticException();
+            throw new DivideByZeroException();
         }
         return numerator/denominator;
     }
-
 
 
 }
